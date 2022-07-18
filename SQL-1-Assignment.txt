@@ -1,0 +1,165 @@
+1. create employee(emp_id,employee_name,department_name,location,salary), 
+   department(dept_id,department_name),
+   locations (location_id, location_name) tables with relevant attributes.
+2. create primary key on each table and foreign keys (location->department, department->employee)
+ex: emp_id is PK in emp table, dept_id is PK in dept table, loc_id is PK in location table.
+
+3. insert 20 employees data, 4 departments data, 2 locations data.
+
+additional queries:
+>> Show departments with no of employees
+>> Show locations with no of department where no of department is 2
+
+
+Solutions
+Ans.1 
+create table locations(
+    location_id number primary key,
+    location_name varchar(200) 
+);
+ 
+
+create table departments(
+     dept_id number primary key,
+     dept_name varchar(200)
+);
+ 
+create table employee(
+    emp_id number primary key,
+    employee_name varchar(200),
+    dept_id number,
+    location_id number,
+    salary number
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ans.2
+alter table employee 
+add foreign key(dept_id) references departments(dept_id)
+ 
+alter table employee 
+add foreign key(location_id) references locations(location_id)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ans.3
+
+-----inserting into departments
+
+insert into departments
+values(1, 'IT')
+
+insert into departments
+values(2, 'SDE')
+
+insert into departments
+values(3, 'BQA')
+
+insert into departments
+values(4, 'OP')
+
+-----inserting into locations
+
+insert into locations
+values(1, 'Noida')
+
+insert into locations
+values(2, 'Bangalore')
+
+
+-----inserting into employee
+
+insert into employee
+values(1,'Ab',1,1,500000);
+
+insert into employee
+values(2,'B',1,2,600000);
+
+insert into employee
+values(3,'C',3,1,1500000);
+
+insert into employee
+values(4,'D',4,2,2300000)
+
+insert into employee
+values(5,'E',4,1,1000000);
+
+insert into employee
+values(6,'F',1,1,700000);
+
+insert into employee
+values(7,'G',2,1,800000);
+
+insert into employee
+values(8,'H',3,1,700000);
+
+insert into employee
+values(9,'I',4,1,1700000);
+
+insert into employee
+values(10,'J',4,2,380000);
+
+insert into employee
+values(11,'K',2,2,4000000);
+
+insert into employee
+values(12,'L',3,2,600000);
+
+insert into employee
+values(13,'M',3,1,700000);
+
+insert into employee
+values(14,'N',4,1,800000);
+
+insert into employee
+values(15,'O',4,1,900000);
+
+insert into employee
+values(16,'P',3,2,400000);
+
+insert into employee
+values(17,'Q',2,1,600000);
+
+insert into employee
+values(18,'R',3,1,700000);
+
+insert into employee
+values(19,'S',4,1,800000);
+
+insert into employee
+values(20,'T',2,2,7000000);
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. write below queries:
+a) display all employees names and their department names
+Ans. select employee.employee_name, departments.dept_name from employee inner join departments on employee.dept_id = departments.dept_id
+
+b) display all location_name, department_name, employee_name, where salary for atleast 3 employee should be same
+Ans.
+select emp_name, dept_name, location_name from
+ (
+ select employee.emp_name, departments.dept_name, locations.location_name, Count(*) over (partition by employee.salary) as salary_count
+ from employee join departments on departments.dept_id = employee.dept_id join loactions on locations.location_id  = employee.locations_id
+ ) S1
+where salary_count>3
+a) select maximum salary earned from each department
+
+select d.department_name , max(e.salary)
+from employee e left join department d
+on e.department_id = d.dept_id
+group by d.department_name
+
+b) select 2nd highest salary from each department.
+select e.employee_name, d.department_name, row_number() over(partition by d.department_name, order by e.salary) as rw
+from employee e
+left join department d
+on e.department_id = d.dept_id
+
+c) select location_name, department_name, average_salary(of each location)
+select l.location_name, d.department_name, avg(e.salary) over(partition by l.location_name) as avg_salary
+from employee e
+left join department d
+on e.department_id = d.dept_id
+left join locations l
+on e.locations_id = l.location_id
+

@@ -1,0 +1,38 @@
+<!-- Homewirk starts from here -->
+<!-- 1st Row -->
+        <div>
+            <h1><a href="basic.html">Link Sharing</a></h1>
+            <form><input  placeholder="Search" type="search"></form>
+        </div>
+
+<!-- 2nd Row 2nd Column (1st Block) -->
+        <div>
+            <p>Login</p>
+            <!-- getAccoutnData will be used for getting the account data based on verifying if corresponding user exis or not -->
+            <form method = "get" action = "getAccountData">
+                <label> Username/Email: </label>*<input required type="text"><br><br>
+                <label>Password:</label>*<input required type = "password"><br><br>
+                <!-- any input in pasword if entered must go for verifcation later, for now it is redirecting to same page-->
+                <a href = "basic.html">Forgot Password</a> <a href = "basic.html"><button>Login</button></a>
+            </form>
+        </div>
+
+<!-- 2nd Row 2nd Column (2nd Block) -->
+        <div>
+            <p>Register</p>
+            <!-- createAccount is a action for creating an account based on the data inputted, please check that 
+                the username is unique and not already in the database otherwise we have to show the popup that username is already taken -->
+            <form method = "post" action="createAccount">
+                <label>First Name</label>*<input required  type = "text"><br>
+                <label>Last Name</label>*<input required type = "text"><br><br>
+                <label>Email</label>*<input required type = "text"><br><br>
+                <label>Username</label>*<input required type = "text"><br><br>
+                <label>Password</label>*<input required type = "text"><br><br>
+                <label>Confirm Password</label>*<input required type = "text"><br>
+                <!-- For Uploading a photo, do add a link or whatever needed -->
+                <label>Photo</label>*<input required ="" type = "text"> <a href=""><button>Brose</button></a><br><br>
+                <a href=""><button>Register</button></a>
+            </form>
+        </div>
+<!-- 2nd Row 1st Column (2nd Block) -->
+

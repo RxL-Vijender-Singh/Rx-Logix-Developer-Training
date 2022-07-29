@@ -1,0 +1,21 @@
+
+
+.iconSetter{
+    width : 20px;
+    height: 20px;
+}
+
+.greyBackground{
+    background-color: lightgrey;
+}
+
+.tableSet{
+    background-color:#ffffff; 
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+    border:3px black solid;
+}
+
+.setRight{
+    float:right;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" href="styleDashboard.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    </head>
+    <body>
+
+      <div class = "container">
+        <nav class="navbar navbar-expand-lg greyBackground">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Link Sharing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+              </ul>
+              <form class=" d-flex" role="search">
+                <input class=" form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class=" btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="setRight nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <!-- Other form of dropdown, but is not working properly  -->
+                <!-- <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class = "row">
+          <table class = "tableSet">
+              <tr>
+                  <td><a href = "dashboard.html">Link Sharing</a></td>
+                  <td><input class = "setRight" placeholder="Search" type = "search"></td>
+                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="cloud.png"></a></td>
+                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="mail.png"></a></td>
+                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="link.png"></a></td>
+                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="person.png"></a></td>
+                  <td class = "setRight">
+                      <select>
+                        <option><selected>AboutMe </selected></option>
+                        <option><a href="">Profile</a></option>
+                        <option><a href="">Uses</a></option>
+                        <option><a href="">Topics</a></option>
+                        <option><a href="">Posts</a></option>
+                        <option><a href="">Logout</a></option>
+                      </select>
+                  </td>
+                  <td>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Me
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+              </tr>
+          </table>
+        </div>
+        <br><br>
+
+        <!-- 
+
+              Here is the page after the nav bar, 2 div containers are made, left and right
+
+         -->
+
+        <div class = "row">
+          <div class="col-sm-5">
+
+            <!-- [0,0] is for user details, image provided by deafult if not provided by user, how many unique people subscribed
+            the topics user created and the no. of topics he created -->
+
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <br>
+                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">UserName</h5>
+                    <h6>@userName</h6>
+                    <table>
+                      <tr>
+                        <td>Subscriptions</td>
+                        <td>Topics</td>
+                      </tr>
+                      <tr>
+                        <td>100</td>
+                        <td>50</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <!-- [1,0] is for subscription, for topic creater delete edit and private will show, 
+              for any other subscribed user he/she can only send the invitation and change there own seriousness -->
+
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class = "greyBackground">Subscriptions</div>
+                <div class="col-md-4">
+                  <br>
+                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row g-0">
+                  <div class="col-md-4">
+                    <br>
+                    &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start " alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+              </div>                        
+            </div>
+
+            <br><br><br>
+
+            <!-- [2,0] is for trending topics if user is subscribed to the tpic it will show unsubscribe else
+            it will give option for subscribe -->
+
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class = "greyBackground">Subscriptions</div>
+                <div class="col-md-4">
+                  <br>
+                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="nature.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row g-0">
+                  <div class="col-md-4">
+                    <br>
+                    &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="nature.png" class="img-fluid rounded-start " alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+              </div>                        
+            </div>
+
+            <!-- [3,0] is for sending an invitation to person whose email is known, dropdown for topics with all 
+            topics user is subscribed to and can send the invitation for -->
+            
+            <div class="card mb-3 " >
+              <form class = "padding">
+                <div class="form-group ">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary setLeft">Submit</button><button type="submit" class="btn btn-primary setRight">Submit</button>
+              </form>
+            </div>
+            <br>
+          </div>
+        </div>  
+      </div>
+
+
+
+
+    </body>
+</html>

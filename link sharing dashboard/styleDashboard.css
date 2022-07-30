@@ -1,0 +1,43 @@
+.iconSetter{
+    width : 20px;
+    height: 20px;
+}
+
+.greyBackground{
+    background-color: lightgrey;
+}
+
+.imageSet{
+   float:left
+}
+
+padding{
+    padding : 10px
+}
+
+th,td{
+    padding : 10px;
+}
+
+.tableSet{
+    background-color:lightgrey; 
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+    border:3px black solid;
+    padding-left: 10cm;
+    padding-right: 10cm;
+    padding-top: 10cm;
+    padding-bottom: 10cm;
+}
+
+.setRight{
+    float:right; 
+}
+
+.setLeft{
+    float:left;
+}
+
+.box{
+    border-style: solid;
+}

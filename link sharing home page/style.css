@@ -5,6 +5,12 @@
     height: 20px;
 }
 
+th,td{
+    padding : 10px;
+}
+
+
+
 .greyBackground{
     background-color: lightgrey;
 }

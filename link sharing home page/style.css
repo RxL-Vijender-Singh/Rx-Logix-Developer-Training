@@ -1,3 +1,7 @@
+body{
+    padding: 25px;
+    background:linear-gradient(#D9F8C4, #F2D7D9,#DFF6FF);
+}
 
 
 .iconSetter{
@@ -5,23 +9,41 @@
     height: 20px;
 }
 
-th,td{
-    padding : 10px;
-}
-
-
-
 .greyBackground{
     background-color: lightgrey;
 }
+
+tb,td{
+	padding:10px;
+}
+
+.textSmall{
+    font-size: xx-small;
+}
+
+.tableRound{
+    border-radius: 25px;
+    background: #F5E8C7;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;  
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+  }
 
 .tableSet{
     background-color:#ffffff; 
     filter: alpha(opacity=40); 
     opacity: 0.95;
     border:3px black solid;
+    padding:10px 10px 10px 10px;
 }
 
 .setRight{
     float:right;
+}
+
+.important{
+	color: lightblue;
+	font-size: 20px; 
 }

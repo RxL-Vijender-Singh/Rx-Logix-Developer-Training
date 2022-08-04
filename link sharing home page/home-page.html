@@ -4,40 +4,50 @@
         <link rel="stylesheet" href="style.css">
         <title>This is Login </title>
         <meta charset="UTF-8">
-        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
-          
-          <!--
-
-            Home Page 1st Row
-
-            -->
-
-
           <!-- 
 
-            search bar and link 2nd Row
+            navbar
 
            -->
 
           <div class = "row">
-            <table  class = "tableSet ">
-              
-              <tr class = "greyBackground">
+            <!-- <table  class = "tableSet">
+              <tr>
+                <td><br></td>
+              </tr>
+              <tr>
                 <td>
-                  <!-- home page redirection -->
+                  home page redirection
                   &nbsp;&nbsp;<a href="home-page.html">Link Sharing</a>
                 </td>
                 <td class = "setRight">
                   <input placeholder="Search" type="search"><img class ="iconSetter" src="search.png"> &nbsp;&nbsp;
                 </td>
               </tr>
-              
-            </table>
+              <tr>
+                <td><br></td>
+              </tr>
+            </table> -->
+            <nav class="navbar navbar-expand-lg bg-light ">
+              <div class="container-fluid ">
+                <a class="navbar-brand" href="home-page.html">Link Sharing</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
           </div>
           <div class="row">
             <!-- empty table between link sharing and search bar and recent shares and login -->
@@ -56,7 +66,7 @@
               
               -->
 
-              <table class="tableSet">
+              <table class=" tableRound">
                 <tr class = "greyBackground">
                   <td colspan="2">
                     Recent shares
@@ -70,9 +80,9 @@
                     <table>
                       <tr>
                         <!-- Will be the combination of first name and last name -->
-                        <td>Full Name</td>
+                        <td class = "important">Full Name</td>
                         <!-- Will show the userName of the admin of topic page, which is unique -->
-                        <td>UserName</td>
+                        <td class = "important">UserName</td>
                         <!-- Topic link will show the link to topic page -->
                         <td class = "setRight"><a href="">topicName</a></td>
                       </tr>
@@ -105,9 +115,9 @@
                     <table>
                       <tr>
                         <!-- Will be the combination of first name and last name -->
-                        <td>Full Name</td>
+                        <td class = "important">Full Name</td>
                         <!-- Will show the userName of the admin of topic page, which is unique -->
-                        <td>UserName</td>
+                        <td class = "important">UserName</td>
                         <!-- Topic link will show the link to topic page -->
                         <td class = "setRight"><a href="">topicName</a></td>
                       </tr>
@@ -139,7 +149,7 @@
 
               -->
 
-              <table class="tableSet">
+              <table class="tableRound">
                 <tr class = "greyBackground">
                   <td>Top Post</td>
                   <td class = "setRight">
@@ -159,9 +169,9 @@
                     <table>
                       <tr>
                         <!-- Will be the combination of first name and last name -->
-                        <td>Full Name</td>
+                        <td class="important">Full Name</td>
                         <!-- Will show the userName of the admin of topic page, which is unique -->
-                        <td>UserName</td>
+                        <td class="important">UserName</td>
                         <!-- Topic link will show the link to topic page -->
                         <td class="setRight"><a href="">topicName</a></td>
                       </tr>
@@ -192,7 +202,7 @@
 
                -->
 
-              <table class = "tableSet">
+              <table class = "tableRound">
                 <tr  class = "greyBackground">
                   <td colspan="2">Login</td>
                 </tr>
@@ -201,9 +211,9 @@
                   <td><br></td>
                 </tr>
                 <tr>
-                  <td>&nbsp;&nbsp;Email/UserName*</td>
+                  <td>&nbsp;&nbsp;Email/UserName*&nbsp;&nbsp;</td>
                   <td>
-                    <input required type="text" >&nbsp;&nbsp;&nbsp;
+                    <input required type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
                   </td>
                 </tr>
                 <tr>
@@ -211,7 +221,7 @@
                   <td><br></td>
                 </tr>
                 <tr>
-                  <td>&nbsp;&nbsp;Password*</td>
+                  <td>&nbsp;&nbsp;Password*&nbsp;&nbsp;</td>
                   <td>
                     <input required type="password">&nbsp;&nbsp;&nbsp;&nbsp;
                   </td>
@@ -223,11 +233,11 @@
                 <tr>
                   <td>
                     <!-- Forgot Password Link -->
-                    &nbsp;&nbsp;<a href="home-page.html">Forgot Password</a>
+                    <a href="home-page.html">Forgot Password</a>
                   </td>
                   <td>
                     <!-- Link For Login, data verification and put data to database -->
-                    <a href = "home-page.html" class="setRight" ><button>Login&nbsp;</button></a>&nbsp;&nbsp;
+                    <a href = "home-page.html" class="setRight" ><button>Login</button></a>
                   </td>
                 </tr>
               </table><br><br>
@@ -238,7 +248,7 @@
 
                -->
 
-               <table class="tableSet">
+               <table class="tableRound ">
                 <tr class = "greyBackground">
                   <td colspan="2">Register</td>
                 </tr>
@@ -307,6 +317,8 @@
               </table>
             </div>
           </div>
-        </div>
+        
+        <br>
+        <br>
     </body>
 </html>

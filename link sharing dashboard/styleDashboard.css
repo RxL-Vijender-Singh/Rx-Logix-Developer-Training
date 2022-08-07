@@ -1,6 +1,47 @@
+.textForceOneLine{
+    width: 100px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+/* .imageCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    border:4px rgba(0, 255, 213, 0.937) solid ;
+  } */
+
+  .important{
+	color: lightblue;
+	font-size: 20px; 
+}
+
 .iconSetter{
     width : 20px;
     height: 20px;
+}
+
+
+
+body{
+    padding: 25px;
+    background:linear-gradient(#D9F8C4, #F2D7D9,#DFF6FF);
+}
+
+fontBold{
+    font-weight: bolder;
+}
+
+.fontLightGrey{
+    color: lightgrey;
+}
+
+.fontLightBlue{
+    color: lightblue;
 }
 
 .greyBackground{
@@ -8,10 +49,13 @@
 }
 
 .imageSet{
-   float:left
+    float:left;
+    width: 150px;
+    height: 150px;
+    border:4px lightgreen solid ; 
 }
 
-padding{
+.padding{
     padding : 10px
 }
 
@@ -19,15 +63,43 @@ th,td{
     padding : 10px;
 }
 
+.textSmall{
+    font-size: small;
+}
+
+.tableRound{
+    border-radius: 25px;
+    background: #F5E8C7;
+    background-repeat: repeat;
+    padding: 20px;  
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+    width: auto;
+  }
+
+ 
+
+  .buttonBackground{
+    background: #F5E8C7
+  }
+
 .tableSet{
     background-color:lightgrey; 
     filter: alpha(opacity=40); 
     opacity: 0.95;
     border:3px black solid;
-    padding-left: 10cm;
-    padding-right: 10cm;
-    padding-top: 10cm;
-    padding-bottom: 10cm;
+    
+    /* padding: 10px; */
+    /* border-radius: 10px; */
+}
+
+.navSet{
+    background-color:rgb(246, 179, 47); 
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+    /* border:3px black solid; */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .setRight{
@@ -37,6 +109,7 @@ th,td{
 .setLeft{
     float:left;
 }
+
 
 .box{
     border-style: solid;

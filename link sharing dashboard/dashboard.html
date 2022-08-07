@@ -1,253 +1,751 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel = "stylesheet" href="styleDashboard.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <!--JQUERY + POOPER.JS + BOOTSTRAP-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styleDashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/832a7a0e3d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-      <div class = "container">
-        <nav class="navbar navbar-expand-lg greyBackground">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Link Sharing</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-                <li class="nav-item">
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                </li>
-              </ul>
-              <form class=" d-flex" role="search">
-                <input class=" form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class=" btn btn-outline-success" type="submit">Search</button>
+  <body>
+    <!-- Navabar, check for about me as it is showing some error -->
+    <nav>
+      <div class="row">
+        <table class="navSet">
+          <tr>
+            <td><a href="body.html">Link Sharing</a></td>
+            <td>
+              <form class="form-inline my-2 my-lg-0">
+                <input
+                  class="mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
               </form>
-              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="setRight nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <!-- Other form of dropdown, but is not working properly  -->
-                <!-- <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </div> -->
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Link
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Link</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div class = "row">
-          <table class = "tableSet">
-              <tr>
-                  <td><a href = "dashboard.html">Link Sharing</a></td>
-                  <td><input class = "setRight" placeholder="Search" type = "search"></td>
-                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="cloud.png"></a></td>
-                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="mail.png"></a></td>
-                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="link.png"></a></td>
-                  <td><a href = "dashboard.html"><img class = "iconSetter setRight" src="person.png"></a></td>
-                  <td class = "setRight">
-                      <select>
-                        <option><selected>AboutMe </selected></option>
-                        <option><a href="">Profile</a></option>
-                        <option><a href="">Uses</a></option>
-                        <option><a href="">Topics</a></option>
-                        <option><a href="">Posts</a></option>
-                        <option><a href="">Logout</a></option>
-                      </select>
-                  </td>
-                  <td>
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About Me
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </td>
-              </tr>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#createTopic"
+              >
+                <i class="fa-solid fa-comment"></i>
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#shareLink"
+              >
+                <i class="fa-solid fa-link"></i>
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#shareDocument"
+              >
+              <i class="fa-solid fa-file-circle-plus"></i>
+              </button>
+            </td>
+            <td>
+              
+                <i class="fa-solid fa-user"></i>
+              
+              <!-- </td>
+                <td class = "setRight">
+                    <select>
+                      <option><selected>AboutMe </selected></option>
+                      <option><a href="">Profile</a></option>
+                      <option><a href="">Uses</a></option>
+                      <option><a href="">Topics</a></option>
+                      <option><a href="">Posts</a></option>
+                      <option><a href="">Logout</a></option>
+                    </select>
+                </td> -->
+            </td>
+
+            <td>
+              <div>
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  UserName
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Uses</a></li>
+                  <li><a class="dropdown-item" href="#">Topic</a></li>
+                  <li><a class="dropdown-item" href="#">Posts</a></li>
+                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </nav>
+
+    <br /><br />
+
+    <div class="row">
+      <div class="col-sm-5">
+        <center>
+          <!-- UserDetails [1,0] -->
+          <table class="tableRound">
+            <tr>
+              <td class=""><img src="person.png" /></td>
+              <td>
+                <table>
+                  <tr>
+                    <td colspan="2" class="fontBold important">
+                      Vijender Singh
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="fontLightGrey">@SinghViju</td>
+                  </tr>
+                  <tr class="fontLightGrey">
+                    <td>Subscriptions</td>
+                    <td>Topics</td>
+                  </tr>
+                  <tr>
+                    <td>5000</td>
+                    <td>5000</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
           </table>
-        </div>
-        <br><br>
+        </center>
+        <br />
 
-        <!-- 
+        <!-- 2nd Row 1st - [2,0] - Column My Subscriptions
+          Contains 2 boxes, 
+          one is for topics created by user, 
+          and other is for topic the user is subscribed to -->
 
-              Here is the page after the nav bar, 2 div containers are made, left and right
+        <table class="tableRound">
+          <tr class="greyBackground">
+            <td colspan="5">Subscriptions</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td colspan="3">
+              <table>
+                <tr>
+                  <td class="important textForceOneLine">
+                    <a href="">FullName</a>
+                  </td>
+                </tr>
+                <tr class="fontLightGrey">
+                  <td>UserName</td>
+                  <td>Subscriptions</td>
+                  <td>Posts</td>
+                </tr>
+                <tr class="fontLightBlue">
+                  <td><a href="">UnsubscribeOption</a></td>
+                  <td>subCount</td>
+                  <td>postCount</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select>
+                <option selected><a href="">Serious</a></option>
+                <option><a href="">Casual</a></option>
+                <option><a href="">Very Serious</a></option>
+              </select>
+            </td>
+            <td width="10%">
+              <select>
+                <option selected><a href="">Private</a></option>
+                <option><a href="">Public</a></option>
+              </select>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </button>&nbsp;&nbsp;&nbsp
+              <!-- Button -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+              <i class="fa-solid fa-file-signature"></i>
+              </button>&nbsp;&nbsp;&nbsp;
+              <!-- Button -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+              <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
 
-         -->
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td colspan="3">
+              <table>
+                <tr>
+                  <td class="important textForceOneLine">
+                    <a href="">FullName</a>
+                  </td>
+                </tr>
+                <tr class="fontLightGrey">
+                  <td>UserName</td>
+                  <td>Subscriptions</td>
+                  <td>Posts</td>
+                </tr>
+                <tr class="fontLightBlue">
+                  <td><a href="">UnsubscribeOption</a></td>
+                  <td>subCount</td>
+                  <td>postCount</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <select>
+                <option selected><a href="">Serious</a></option>
+                <option><a href="">Casual</a></option>
+                <option><a href="">Very Serious</a></option>
+              </select>
+            </td>
+            <td><button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#sendInvitation"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </button>&nbsp;&nbsp;&nbsp;
+            </td>
+          </tr>
+        </table>
 
-        <div class = "row">
-          <div class="col-sm-5">
+        <br />
 
-            <!-- [0,0] is for user details, image provided by deafult if not provided by user, how many unique people subscribed
-            the topics user created and the no. of topics he created -->
+        <table class="tableRound">
+          <tr class="greyBackground">
+            <td colspan="5">Trending Topics</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td colspan="3">
+              <table>
+                <tr>
+                  <td class="important textForceOneLine">
+                    <a href="">FullName</a>
+                  </td>
+                </tr>
+                <tr class="fontLightGrey">
+                  <td>UserName</td>
+                  <td>Subscriptions</td>
+                  <td>Posts</td>
+                </tr>
+                <tr class="fontLightBlue">
+                  <td><a href="">SubscribeOption</a></td>
+                  <td>subCount</td>
+                  <td>postCount</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td colspan="3">
+              <table>
+                <tr>
+                  <input placeholder="TopicName" type="text" />
+                  <a href=""><button>Save</button></a>
+                  <a href=""><button>Cancel</button></a>
+                </tr>
+                <tr class="fontLightGrey">
+                  <td>UserName</td>
+                  <td>Subscriptions</td>
+                  <td>Posts</td>
+                </tr>
+                <tr class="fontLightBlue">
+                  <td><a href="">UnsubscribeOption</a></td>
+                  <td>subCount</td>
+                  <td>postCount</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select>
+                <option selected><a href="">Serious</a></option>
+                <option><a href="">Casual</a></option>
+                <option><a href="">Very Serious</a></option>
+              </select>
+            </td>
+            <td width="10%">
+              <select>
+                <option selected><a href="">Private</a></option>
+                <option><a href="">Public</a></option>
+              </select>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </button>&nbsp;&nbsp;&nbsp
+              <!-- Button -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+              <i class="fa-solid fa-file-signature"></i>
+              </button>&nbsp;&nbsp;&nbsp;
+              <!-- Button -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#sendInvitation"
+              >
+              <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
 
-            <div class="card mb-3" >
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <br>
-                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">UserName</h5>
-                    <h6>@userName</h6>
-                    <table>
-                      <tr>
-                        <td>Subscriptions</td>
-                        <td>Topics</td>
-                      </tr>
-                      <tr>
-                        <td>100</td>
-                        <td>50</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
+        <br />
 
-            <!-- [1,0] is for subscription, for topic creater delete edit and private will show, 
-              for any other subscribed user he/she can only send the invitation and change there own seriousness -->
-
-            <div class="card mb-3" >
-              <div class="row g-0">
-                <div class = "greyBackground">Subscriptions</div>
-                <div class="col-md-4">
-                  <br>
-                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row g-0">
-                  <div class="col-md-4">
-                    <br>
-                    &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="person.png" class="img-fluid rounded-start " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-              </div>                        
-            </div>
-
-            <br><br><br>
-
-            <!-- [2,0] is for trending topics if user is subscribed to the tpic it will show unsubscribe else
-            it will give option for subscribe -->
-
-            <div class="card mb-3" >
-              <div class="row g-0">
-                <div class = "greyBackground">Subscriptions</div>
-                <div class="col-md-4">
-                  <br>
-                  &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="nature.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row g-0">
-                  <div class="col-md-4">
-                    <br>
-                    &nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;<img src="nature.png" class="img-fluid rounded-start " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-              </div>                        
-            </div>
-
-            <!-- [3,0] is for sending an invitation to person whose email is known, dropdown for topics with all 
-            topics user is subscribed to and can send the invitation for -->
-            
-            <div class="card mb-3 " >
-              <form class = "padding">
-                <div class="form-group ">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary setLeft">Submit</button><button type="submit" class="btn btn-primary setRight">Submit</button>
-              </form>
-            </div>
-            <br>
-          </div>
-        </div>  
+        
       </div>
 
+      <!-- All 2nd Columns Below -->
+
+      <div class="col-sm-7">
+        <table class="tableRound">
+          <tr class="greyBackground">
+            <td colspan="2">Recent shares</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <!-- Will be the combination of first name and last name -->
+                  <td colspan="2" class="important textForceOneLine">
+                    Full Name
+                  </td>
+                  <!-- Will show the userName of the admin of topic page, which is unique -->
+                  <td class="important textForceOneLine">UserName</td>
+                  <!-- Topic link will show the link to topic page -->
+                  <td colspan="3"><a href="" class="setRight">topicName</a></td>
+                </tr>
+                <tr>
+                  <!-- Short para details about the topic -->
+                  <td colspan="6">
+                    This is a post by a nature loving guy, loves to plant trees
+                    and enjoy to stay with nature. Hare Krishna........
+                  </td>
+                </tr>
+                <tr>
+                  <!-- To add the username instagram and linkedin profile link, may not be used -->
+                  <td class="textForceOneLine">
+                    <a href=""><img class="iconSetter" src="facebook.png" /></a>
+                  </td>
+                  <td class="textForceOneLine">
+                    <a href=""
+                      ><img class="iconSetter" src="instagram.png"
+                    /></a>
+                  </td>
+                  <td class="textForceOneLine" width="0.4%">
+                    <a href="">Download</a>
+                  </td>
+                  <td class="textForceOneLine" width="0.5%">
+                    <a href="">View Full Site</a>
+                  </td>
+                  <td class="textForceOneLine" width="17%">
+                    <a href="">Mark as Read</a>
+                  </td>
+                  <td class="textForceOneLine" width="10%">
+                    <a href="">view post</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img src="nature.png" class="imageSet" />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <!-- Will be the combination of first name and last name -->
+                  <td colspan="2" class="important textForceOneLine">
+                    Full Name
+                  </td>
+                  <!-- Will show the userName of the admin of topic page, which is unique -->
+                  <td class="important textForceOneLine">UserName</td>
+                  <!-- Topic link will show the link to topic page -->
+                  <td colspan="3"><a href="" class="setRight">topicName</a></td>
+                </tr>
+                <tr>
+                  <!-- Short para details about the topic -->
+                  <td colspan="6">
+                    This is a post by a nature loving guy, loves to plant trees
+                    and enjoy to stay with nature. Hare Krishna........
+                  </td>
+                </tr>
+                <tr>
+                  <!-- To add the username instagram and linkedin profile link, may not be used -->
+                  <td class="textForceOneLine">
+                    <a href=""><img class="iconSetter" src="facebook.png" /></a>
+                  </td>
+                  <td class="textForceOneLine">
+                    <a href=""
+                      ><img class="iconSetter" src="instagram.png"
+                    /></a>
+                  </td>
+                  <td class="textForceOneLine" width="0.4%">
+                    <a href="">Download</a>
+                  </td>
+                  <td class="textForceOneLine" width="0.5%">
+                    <a href="">View Full Site</a>
+                  </td>
+                  <td class="textForceOneLine" width="17%">
+                    <a href="">Mark as Read</a>
+                  </td>
+                  <td class="textForceOneLine" width="10%">
+                    <a href="">view post</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <br />
+
+        <!-- Modal Create Topic -->
+        <div
+          class="modal fade"
+          id="createTopic"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header greyBackground">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Create Topic
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table class="tableRound">
+                  <!-- <tr>
+                <td><br></td>
+              </tr> -->
+                  <tr>
+                    <td class="textForceOneLine">&nbsp;&nbsp;Name*</td>
+                    <td colspan="2">
+                      <input required type="search" size="autofocus" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;&nbsp;Visibility*</td>
+                    <td colspan="2">
+                      <select class="setLeft">
+                        <option selected><a href="">Serious</a></option>
+                        <option><a href="">Casual</a></option>
+                        <option><a href="">Very Serious</a></option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Invite</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
 
 
 
-    </body>
+    <!-- Modal Share Link -->
+    <div
+    class="modal fade"
+    id="shareLink"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header greyBackground">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            Share Link
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="tableRound">
+            <tr>
+              <td class="textForceOneLine">&nbsp;&nbsp;Link*</td>
+              <td colspan="2"><input required type="search" /></td>
+            </tr>
+            <!-- <tr>
+          <td><br></td>
+        </tr> -->
+            <tr>
+              <td class="textForceOneLine">&nbsp;&nbsp;Descrtiption*</td>
+              <td><textarea rows="3" cols="40"></textarea></td>
+            </tr>
+            <!-- <tr>
+          <td><br></td>
+        </tr> -->
+            <tr>
+              <td>&nbsp;&nbsp;Topic</td>
+              <td colspan="2">
+                <select>
+                  <option selected><a href="">Topic1</a></option>
+                  <option><a href="">Topic2</a></option>
+                  <option><a href="">Topic3</a></option>
+                  <option><a href="">Topic4</a></option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-primary">
+            Share
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-dismiss="modal"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Share Document Pop-Up -->
+  <div class="modal fade" id="shareDocument" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header greyBackground">
+          <h5 class="modal-title " id="exampleModalLongTitle">Share Document</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="tableRound " >
+            
+            <!-- <tr>
+              <td><br></td>
+            </tr> -->
+            <tr>
+              <td class="textForceOneLine" >&nbsp;&nbsp;Document*</td>
+              <td class="textForceOneLine"><input required type="search" width="10%">
+                <input required type="file" class="setLeft"></td>
+            </tr>
+            <!-- <tr>
+              <td><br></td>
+            </tr> -->
+            <tr>
+              <td class="textForceOneLine">&nbsp;&nbsp;Descrtiption*</td>
+              <td ><textarea rows="4" cols="40"></textarea></td>
+            </tr>
+            <!-- <tr>
+              <td><br></td>
+            </tr> -->
+            <tr>
+              <td>&nbsp;&nbsp;Topic</td>
+              <td colspan="2" width = "100%">
+                <select>
+                  <option selected><a href="">Topic1</a></option>
+                  <option><a href="">Topic2</a></option>
+                  <option><a href="">Topic3</a></option>
+                  <option><a href="">Topic4</a></option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal Send Invitation Pop-Up -->
+  <div class="modal fade" id="sendInvitation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header greyBackground">
+          <h5 class="modal-title " id="exampleModalLongTitle">Send Invitation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="tableRound">
+            <tr>
+              <td class="textForceOneLine">&nbsp;&nbsp;Email*</td>
+              <td colspan="2"><input required type="email" size="40%" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;Topic</td>
+              <td colspan="2" width="100%">
+                <select>
+                  <option selected><a href="">Topic1</a></option>
+                  <option><a href="">Topic2</a></option>
+                  <option><a href="">Topic3</a></option>
+                  <option><a href="">Topic4</a></option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="">
+                <a href=""><button>Invite</button></a>
+              </td>
+              <td>
+                <a href=""><button>Cancel</button></a>
+              </td>
+            </tr>
+          </table>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Invite</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </body>
 </html>

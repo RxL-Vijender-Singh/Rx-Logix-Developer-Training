@@ -27,9 +27,11 @@
 
 
 
+
+
 body{
     padding: 25px;
-    background:linear-gradient(#D9F8C4, #F2D7D9,#DFF6FF);
+    background:linear-gradient(#FFFFFF,#FBB454, #FFFFFF, #FFFFFF,#3CCF4E,#FFFFFF);
 }
 
 fontBold{
@@ -74,7 +76,16 @@ th,td{
     padding: 20px;  
     filter: alpha(opacity=40); 
     opacity: 0.95;
-    width: auto;
+  }
+
+  .modalTable{
+    border-radius: 25px;
+    background: #F5E8C7;
+    background-repeat: repeat;
+    padding: 20px;  
+    filter: alpha(opacity=40); 
+    opacity: 0.95;
+    width: min-content;
   }
 
  
